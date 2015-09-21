@@ -1,4 +1,4 @@
 vpadma.github.io
 ================
 
-link to vinaypadma.me
+link to vinaypadma.com
