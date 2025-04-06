@@ -56,7 +56,7 @@
 \newcommand{\educationSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\large#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -64,7 +64,7 @@
 \newcommand{\resumeSubheadingWithSummary}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\large#1} & #2 \\
       \multicolumn{2}{p{0.97\textwidth}}{\textit{\small #3}} \\
       \textit{\small\textbf{#4}} & \textit{\small #5} \\
     \end{tabular*}\vspace{-7pt}
@@ -73,7 +73,7 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\large#1} & #2 \\
       \textit{\small\textbf{#3}} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -123,6 +123,17 @@
       {International Baccalaureate Diploma}{2008 -- 2012}
   \resumeSubHeadingListEnd
 
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Kotlin, C++11, C, Python 3, SQL, MATLAB} \\
+     \textbf{Technologies}{: AWS (EC2, KMS, S3, IoT), Temporal Workflow, Kafka, MongoDB, Elasticsearch, Redis, gRPC, Protobuf} \\
+     \textbf{Core competencies}{: Large-scale distributed systems design, API design, Systems \& embedded programming, Android} \\
+     \textbf{Software Tools}{: Git, Vim, Perforce, Android Studio, Prometheus, Splunk, SignalFx, Pagerduty}
+    }}
+ \end{itemize}
+
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -131,7 +142,7 @@
       {Founding engineer for Stripe Terminal, the company’s in-person payment product, launched in 2018. Acted as domain expert and API reviewer; supported scaling of product and team to 70+ engineers (100+ with hardware). Terminal now processes \$80B+ annually. Select major projects are listed below.}
       {Engineering, Terminal Core Infrastructure}{Aug 2020 -- Present}
       \resumeItemListStart
-        \resumeItem{Designed and scaled OTA deployment infrastructure for client software across 1M+ devices with enterprise-grade features (gradual rollout, MDM integration). Multiple patents granted.}
+        \resumeItem{Designed and scaled OTA deployment infrastructure for client software across 1M+ devices with enterprise-grade features (gradual rollout, observability, MDM functionality). Multiple patents granted.}
         \resumeItem{Built a platform for users to upload and deploy custom apps on field devices; contributed to signing, API design, and web dashboards. As of 2025, 140k+ devices use this, processing \$9.5B in incremental transactions.}
         \resumeItem{Implemented dynamic TLS certificate provisioning for local HTTPS servers on devices via Let's Encrypt; issued 100M+ certs, enabling \$100B+ in transactions.}
         \resumeItem{Developed a data pipeline using CDC to populate Elasticsearch for search and analytics; powers dashboards and enterprise features with rich query capability.}
@@ -142,10 +153,9 @@
         \resumeItem{Built C++ embedded applications for Terminal payment devices, implementing payments, HTTPS server, networking, and threading model.}
         \resumeItem{Ported embedded apps to Android (Kotlin) to support new hardware and scale development team. Launched Stripe’s first Android-based Terminal device in 2020.}
       \resumeItemListEnd
-    \textit{Core competencies\: Large-scale distributed systems design, Product \& API design, Java, Kotlin, C++11}
     
     \resumeSubheading
-      {Index, San Francisco (Acquired by Stripe)}{2017}
+      {Index, San Francisco (Acquired by Stripe)}{2017 -- 2018}
       {Member of Technical Staff, Platform \& Embedded Technologies}{}
       \resumeItemListStart
         \resumeItem{Contributed to core embedded and platform technologies, laying groundwork before the Stripe acquisition}
@@ -154,55 +164,34 @@
     \resumeSubheadingWithSummary
       {Apple Inc, Cupertino, CA}{2015 -- 2016}
       {Designed and built systems to test various RF systems, such as the antenna on the iPhone X through 2 internships.}
-      {RF Instrumentation Software Engineering Intern}{Aug 2016 -- Dec 2016}
+      {RF Instrumentation Software Engineering Intern}{2016}
     \resumeRoleSubHeading
-      {Wireless/RF Engineering Intern}{Aug 2015 -- Dec 2015}
+      {Wireless/RF Engineering Intern}{2015}    
     
     \vspace{2pt}
-    \textit{Core competencies: C++11, Python, Flask, MATLAB, STL, Perforce, API Design}
 
     \resumeSubheading
       {Sandvine Inc, Waterloo, ON}{2015}
-      {Embedded Software Engineer}{}
+      {Embedded Software Engineering Intern}{}
       \resumeItemListStart
         \resumeItem{Embedded C++ development: designed a multi-constraint traffic load-balancing system. Patent granted}
       \resumeItemListEnd
-      \textit{Core competencies\: C, C++11, Python, STL, Boost Library}
 
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
+%-----------PATENTS-----------
+\section{Patents}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{CommBlocker}}{May 2015 -- Present}
-          \resumeItemListStart
-            \resumeItem{Headset solution for noise reduction for speech privacy}
-            \resumeItem{Wave models and simulations using MATLAB}
-          \resumeItemListEnd
+          {\textbf{\href{https://patents.google.com/patent/US20240201975A1/en}{\underline{Stripe, US20240201975A1}}, Deploying assets}}{Pending, 2024}
       \resumeProjectHeading
-          {\textbf{NoKey - RIT BrickHacks 2}}{Feb 2016}
-          \resumeItemListStart
-            \resumeItem{Designed a proximity-based Bluetooth replacement for car keys}
-            \resumeItem{Finalist for Best Hack}
-          \resumeItemListEnd
+          {\textbf{\href{https://patents.google.com/patent/US20240152899A1/en}{\underline{Stripe, US20240152899A1}}, Handoff between applications on a payment terminal}}{Pending, 2024}
       \resumeProjectHeading
-          {\textbf{Design and Build Multistage Amplifier}}{Nov 2014}
-          \resumeItemListStart
-            \resumeItem{Utilized IC building blocks to meet specifications for amplifier design}
-          \resumeItemListEnd
+          {\textbf{\href{https://patents.google.com/patent/US20240152394A1/en}{\underline{Stripe, US20240152394A1}}, Deploying applications to a payment terminal}}{Pending, 2024}
+      \resumeProjectHeading
+          {\textbf{\href{https://patents.google.com/patent/US20240152653A1/en}{\underline{Stripe, US20240152653A1}}, Secure signing of applications for a payment terminal}}{Pending, 2024}
+      \resumeProjectHeading
+          {\textbf{\href{https://patents.google.com/patent/US20170264550A1/en?oq=US2017264550}{\underline{Sandvine, US20170264550A1}}, System and method for packet distribution on a network}}{Granted, 2017}
     \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C++, C, Python, MATLAB} \\
-     \textbf{Frameworks}{: Systems Programming, Embedded Development} \\
-     \textbf{Software Tools}{: Git, Perforce, Clearcase, XCode, Vim} \\
-     \textbf{Test Equipment}{: Oscilloscopes, VNAs, Spectrum Analyzers}
-    }}
- \end{itemize}
-
-%-------------------------------------------
 \end{document}
