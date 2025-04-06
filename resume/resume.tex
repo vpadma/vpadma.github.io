@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Vinay Padma
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\educationSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingWithSummary}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \multicolumn{2}{p{0.97\textwidth}}{\textit{\small #3}} \\
+      \textit{\small\textbf{#4}} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small\textbf{#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRoleSubHeading}[2]{
+    \vspace{-5pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small\textbf{#1}} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Vinay Padma} \\ \vspace{1pt}
+    \small +1 415 579 6769 $|$ \href{mailto:vinay.padma@gmail.com}{\underline{vinay.padma@gmail.com}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \educationSubheading
+      {University of Waterloo}{Waterloo, ON}
+      {Bachelor of Applied Science in Electrical Engineering, Honors}{2012 -- 2017}
+    \educationSubheading
+      {Turner Fenton Secondary School}{Brampton, ON}
+      {International Baccalaureate Diploma}{2008 -- 2012}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheadingWithSummary
+      {Stripe, San Francisco / New York}{2018 -- Present}
+      {Founding engineer for Stripe Terminal, the company’s in-person payment product, launched in 2018. Acted as domain expert and API reviewer; supported scaling of product and team to 70+ engineers (100+ with hardware). Terminal now processes \$80B+ annually. Select major projects are listed below.}
+      {Engineering, Terminal Core Infrastructure}{Aug 2020 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designed and scaled OTA deployment infrastructure for client software across 1M+ devices with enterprise-grade features (gradual rollout, MDM integration). Multiple patents granted.}
+        \resumeItem{Built a platform for users to upload and deploy custom apps on field devices; contributed to signing, API design, and web dashboards. As of 2025, 140k+ devices use this, processing \$9.5B in incremental transactions.}
+        \resumeItem{Implemented dynamic TLS certificate provisioning for local HTTPS servers on devices via Let's Encrypt; issued 100M+ certs, enabling \$100B+ in transactions.}
+        \resumeItem{Developed a data pipeline using CDC to populate Elasticsearch for search and analytics; powers dashboards and enterprise features with rich query capability.}
+      \resumeItemListEnd
+    \resumeRoleSubHeading
+      {Engineering, Terminal Device Platform}{Mar 2018 -- Aug 2020}
+      \resumeItemListStart
+        \resumeItem{Built C++ embedded applications for Terminal payment devices, implementing payments, HTTPS server, networking, and threading model.}
+        \resumeItem{Ported embedded apps to Android (Kotlin) to support new hardware and scale development team. Launched Stripe’s first Android-based Terminal device in 2020.}
+      \resumeItemListEnd
+    \textit{Core competencies\: Large-scale distributed systems design, Product \& API design, Java, Kotlin, C++11}
+    
+    \resumeSubheading
+      {Index, San Francisco (Acquired by Stripe)}{2017}
+      {Member of Technical Staff, Platform \& Embedded Technologies}{}
+      \resumeItemListStart
+        \resumeItem{Contributed to core embedded and platform technologies, laying groundwork before the Stripe acquisition}
+      \resumeItemListEnd
+
+    \resumeSubheadingWithSummary
+      {Apple Inc, Cupertino, CA}{2015 -- 2016}
+      {Designed and built systems to test various RF systems, such as the antenna on the iPhone X through 2 internships.}
+      {RF Instrumentation Software Engineering Intern}{Aug 2016 -- Dec 2016}
+    \resumeRoleSubHeading
+      {Wireless/RF Engineering Intern}{Aug 2015 -- Dec 2015}
+    
+    \vspace{2pt}
+    \textit{Core competencies: C++11, Python, Flask, MATLAB, STL, Perforce, API Design}
+
+    \resumeSubheading
+      {Sandvine Inc, Waterloo, ON}{2015}
+      {Embedded Software Engineer}{}
+      \resumeItemListStart
+        \resumeItem{Embedded C++ development: designed a multi-constraint traffic load-balancing system. Patent granted}
+      \resumeItemListEnd
+      \textit{Core competencies\: C, C++11, Python, STL, Boost Library}
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{CommBlocker}}{May 2015 -- Present}
+          \resumeItemListStart
+            \resumeItem{Headset solution for noise reduction for speech privacy}
+            \resumeItem{Wave models and simulations using MATLAB}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{NoKey - RIT BrickHacks 2}}{Feb 2016}
+          \resumeItemListStart
+            \resumeItem{Designed a proximity-based Bluetooth replacement for car keys}
+            \resumeItem{Finalist for Best Hack}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Design and Build Multistage Amplifier}}{Nov 2014}
+          \resumeItemListStart
+            \resumeItem{Utilized IC building blocks to meet specifications for amplifier design}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, C, Python, MATLAB} \\
+     \textbf{Frameworks}{: Systems Programming, Embedded Development} \\
+     \textbf{Software Tools}{: Git, Perforce, Clearcase, XCode, Vim} \\
+     \textbf{Test Equipment}{: Oscilloscopes, VNAs, Spectrum Analyzers}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
