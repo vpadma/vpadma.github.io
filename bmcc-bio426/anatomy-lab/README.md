@@ -94,6 +94,7 @@ Further reading:
 From the repository root, run:
 
 ```sh
+node bmcc-bio426/anatomy-lab/version-assets.cjs
 node bmcc-bio426/anatomy-lab/verify.cjs
 node --check bmcc-bio426/anatomy-lab/app.js
 node --check bmcc-bio426/anatomy-lab/data.js
@@ -119,5 +120,7 @@ node bmcc-bio426/anatomy-lab/browser-qa.cjs
 Use `QA_TARGET=live` to test the hosted page. Optionally set `QA_CHROME` to an installed Chrome executable, such as `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`. The checkout runner starts and stops its own local server. Set `QA_OUTPUT` to choose an output directory; the default is `qa-output/` relative to your current directory.
 
 The browser checks cover all 99 list selections and diagram targets, view switching, labels, zoom centering, complete quiz rounds, aliases, wrong answers, reveals, retry rounds, restarting, keyboard tabs, mobile layouts, and failed assets. Screenshots and `findings.json` are saved for inspection. A failing check exits with code 1. Browser checks verify behavior; inspect the screenshots and compare markers against the source plates to assess anatomy.
+
+After editing JavaScript or CSS, run `version-assets.cjs` to update their content-versioned URLs in `index.html`. This prevents returning browsers from combining old scripts with a new page. `verify.cjs` checks that these versions match the files.
 
 To publish an update, commit and push the files in this folder to the site’s `master` branch. GitHub Pages serves this directory directly; no build step is required.

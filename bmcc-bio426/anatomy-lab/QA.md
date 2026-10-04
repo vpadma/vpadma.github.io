@@ -47,3 +47,9 @@ This QA establishes tested Chromium behavior and a source-based visual review. I
 ## Reproduce
 
 See [README.md](README.md) for local setup, `QA_TARGET=checkout`, `QA_TARGET=live`, and screenshot output options. No GitHub Actions run is required for local testing.
+
+## Returning-browser regression discovered after publication
+
+The initial clean-session QA missed a mixed-cache failure. A user screenshot showed the new regional controls and footer with old schematic artwork, including a heart under “Head & neck.” This was reproduced exactly by serving the earlier unversioned `app.js` and `data.js` with the new HTML and atlas metadata. The reproduction loaded two stale assets, rendered no textbook image, and displayed the erroneous heart.
+
+JavaScript and CSS URLs now include hashes of their contents. Repeating the same stale-cache simulation loaded zero stale assets and displayed the correct head/neck plate. `version-assets.cjs` updates the hashes and `verify.cjs` checks them. The previous pass counts did not justify a claim that existing users would receive the correct release; the original visual-quality claim was too broad.
