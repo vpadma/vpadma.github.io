@@ -1,36 +1,21 @@
-name: BIO426 browser QA
+name: BIO426 source artwork retrieval
 on:
   workflow_dispatch:
-    inputs:
-      target:
-        description: 'Page to test'
-        type: choice
-        options: [live, checkout]
-        default: live
 permissions:
   contents: read
 jobs:
-  browser-qa:
+  artwork:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install isolated browser tools
+      - name: Fetch attributed source artwork
         run: |
-          npm install --prefix "$RUNNER_TEMP/anatomy-qa" --no-package-lock playwright@1.54.1
-          "$RUNNER_TEMP/anatomy-qa/node_modules/.bin/playwright" install --with-deps chromium
-      - name: Inspect the hosted page or this checkout
-        env:
-          PLAYWRIGHT_MODULE: ${{ runner.temp }}/anatomy-qa/node_modules/playwright
-          QA_TARGET: ${{ inputs.target }}
-        run: node bmcc-bio426/anatomy-lab/browser-qa.cjs
-      - name: Save screenshots and findings
-        if: always()
-        uses: actions/upload-artifact@v4
+          mkdir -p plates
+          curl --fail --retry 2 -L 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Left_marginal_vein_of_heart.png' -o plates/Left_marginal_vein_of_heart.png
+          curl --fail --retry 2 -L 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Pectinate_muscles_of_right_atrium.png' -o plates/Pectinate_muscles_of_right_atrium.png
+          curl --fail --retry 2 -L 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Gray577.png' -o plates/Gray577.png
+          curl --fail --retry 2 -L 'https://upload.wikimedia.org/wikipedia/commons/3/33/Gray591.png' -o plates/Gray591.png
+      - uses: actions/upload-artifact@v4
         with:
-          name: bio426-browser-qa
-          path: qa-output/
-          retention-days: 14
+          name: anatomy-source-artwork
+          path: plates/
+          retention-days: 7
