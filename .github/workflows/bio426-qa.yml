@@ -1,0 +1,36 @@
+name: BIO426 browser QA
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Page to test'
+        type: choice
+        options: [live, checkout]
+        default: live
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/anatomy-qa" --no-package-lock playwright@1.54.1
+          "$RUNNER_TEMP/anatomy-qa/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Inspect the hosted page or this checkout
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/anatomy-qa/node_modules/playwright
+          QA_TARGET: ${{ inputs.target }}
+        run: node bmcc-bio426/anatomy-lab/browser-qa.cjs
+      - name: Save screenshots and findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bio426-browser-qa
+          path: qa-output/
+          retention-days: 14
