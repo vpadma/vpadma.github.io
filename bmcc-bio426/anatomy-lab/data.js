@@ -1,110 +1,1144 @@
+// Course terms and independently written study explanations. See SOURCES.md.
 const sections = [
-{title:'Abdominal Aorta',subtitle:'Principal arteries of the human body',views:['Whole body'],color:'#d64b59',items:[]},
-{title:'Principal Veins of the Human Body',subtitle:'Systemic return & the hepatic portal system',views:['Whole body','Abdominal veins','Posterior thorax'],color:'#4589d5',items:[]},
-{title:'Heart Blood Vessels',subtitle:'Coronary circulation',views:['Anterior','Posterior'],color:'#d64b59',items:[]},
-{title:'The Human Heart',subtitle:'Chambers, valves & the heart wall',views:['Sectioned heart','Heart wall'],color:'#b77bdd',items:[]}
+  {
+    "title": "Abdominal Aorta",
+    "subtitle": "Principal arteries of the human body",
+    "views": [
+      "Whole body"
+    ],
+    "color": "#d64b59",
+    "items": [
+      {
+        "name": "Abdominal Aorta",
+        "location": "Retroperitoneal; from the diaphragm at T12 to the L4 bifurcation.",
+        "job": "Distributes systemic blood to abdominal organs, the pelvis and lower limbs.",
+        "key": "Its paired common iliac branches begin at about L4.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-0",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Anterior Tibial Artery",
+        "location": "Anterior compartment of the leg, after crossing the interosseous membrane.",
+        "job": "Supplies anterior leg muscles and continues as dorsalis pedis on the foot.",
+        "key": "A branch of the popliteal artery.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-1",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Aortic Arch",
+        "location": "Superior mediastinum; curves above the heart.",
+        "job": "Distributes blood to the head, neck and upper limbs and continues as descending aorta.",
+        "key": "Typical branches: brachiocephalic trunk, left common carotid and left subclavian.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-2",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Arcuate Artery",
+        "location": "Dorsum of the foot, near the bases of the metatarsals.",
+        "job": "Gives dorsal metatarsal branches that help supply the toes.",
+        "key": "Here interpreted as the foot artery, a branch of dorsalis pedis; the PDF does not specify foot versus renal arcuate arteries.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-3",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Ascending Aorta",
+        "location": "Leaves the left ventricle and rises within the pericardium.",
+        "job": "Carries oxygenated blood from the left ventricle into systemic circulation.",
+        "key": "The coronary arteries originate at its root.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-4",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Brachial Artery",
+        "location": "Anterior arm; continuation of the axillary artery beyond teres major.",
+        "job": "Supplies the arm before dividing into radial and ulnar arteries near the elbow.",
+        "key": "Used when measuring blood pressure at the arm.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-5",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Brachiocephalic Artery",
+        "location": "First typical branch of the aortic arch, on the right.",
+        "job": "Feeds the right common carotid and right subclavian arteries.",
+        "key": "There is normally no left brachiocephalic artery.",
+        "aliases": [
+          "Brachiocephalic Trunk",
+          "Innominate Artery"
+        ],
+        "view": 0,
+        "id": "s0-6",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Celiac Trunk",
+        "location": "Short anterior branch of the abdominal aorta near T12.",
+        "job": "Supplies foregut derivatives through gastric, splenic and hepatic branches.",
+        "key": "Its three classic branches are left gastric, splenic and common hepatic.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-7",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Common Carotid Artery",
+        "location": "Ascends in the neck within the carotid sheath.",
+        "job": "Provides the inflow that divides into internal and external carotid arteries.",
+        "key": "The right arises from the brachiocephalic trunk; the left usually from the arch.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-8",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Common Hepatic Artery",
+        "location": "Runs from the celiac trunk toward the liver on the anatomical right.",
+        "job": "Supplies the liver and, through branches, parts of the stomach, duodenum and pancreas.",
+        "key": "The proper hepatic artery continues toward the liver.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-9",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Common Iliac Artery",
+        "location": "Paired terminal branches of the abdominal aorta.",
+        "job": "Deliver blood to internal and external iliac arteries.",
+        "key": "Distinguish common iliac from its pelvic and lower-limb branches.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-10",
+        "vesselType": "artery"
+      },
+      {
+        "name": "External Carotid Artery",
+        "location": "Anterior branch at the common carotid bifurcation.",
+        "job": "Supplies much of the face, scalp and superficial head and neck.",
+        "key": "Unlike internal carotid, it gives multiple branches in the neck.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-11",
+        "vesselType": "artery"
+      },
+      {
+        "name": "External Iliac Artery",
+        "location": "Along the pelvic brim; passes beneath the inguinal ligament.",
+        "job": "Main arterial route from the pelvis into the lower limb.",
+        "key": "Becomes the femoral artery at the inguinal ligament.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-12",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Femoral Artery",
+        "location": "Anterior thigh, including the femoral triangle.",
+        "job": "Supplies the lower limb directly and through branches such as profunda femoris.",
+        "key": "Becomes popliteal after passing through the adductor hiatus.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-13",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Fibular Artery",
+        "location": "Deep posterior leg, close to the fibula.",
+        "job": "Supplies deep posterior and lateral leg structures.",
+        "key": "Usually branches from posterior tibial via the tibioperoneal trunk.",
+        "aliases": [
+          "Peroneal Artery"
+        ],
+        "view": 0,
+        "id": "s0-14",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Inferior Mesenteric Artery",
+        "location": "Anterior abdominal aorta, usually around L3.",
+        "job": "Supplies hindgut: distal transverse colon through the upper rectum.",
+        "key": "The superior mesenteric artery supplies the midgut.",
+        "aliases": [
+          "IMA"
+        ],
+        "view": 0,
+        "id": "s0-15",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Internal Carotid Artery",
+        "location": "Deep neck; enters the skull through the carotid canal.",
+        "job": "Supplies the anterior cerebral circulation and the orbit.",
+        "key": "Normally gives no branches in the neck.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-16",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Internal Iliac Artery",
+        "location": "Branches medially into the pelvis.",
+        "job": "Supplies pelvic organs, gluteal region and perineum.",
+        "key": "External iliac is the major route to the lower limb.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-17",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Left Gastric Artery",
+        "location": "Small celiac branch running toward the lesser curvature of the stomach.",
+        "job": "Supplies the lower esophagus and lesser curvature.",
+        "key": "Anastomoses with the right gastric artery.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-18",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Palmar Arch",
+        "location": "Palm; superficial and deep arterial arches.",
+        "job": "Connects radial and ulnar circulations and supplies digital branches.",
+        "key": "The superficial arch is mainly ulnar; the deep arch mainly radial.",
+        "aliases": [
+          "Superficial Palmar Arch",
+          "Deep Palmar Arch"
+        ],
+        "view": 0,
+        "id": "s0-19",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Popliteal Artery",
+        "location": "Behind the knee in the popliteal fossa.",
+        "job": "Supplies the knee region and gives rise to the major leg arteries.",
+        "key": "Continuation of femoral after the adductor hiatus.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-20",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Posterior Tibial Artery",
+        "location": "Posterior leg; passes behind the medial malleolus.",
+        "job": "Supplies posterior leg and plantar foot.",
+        "key": "Its pulse is felt behind the medial ankle.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-21",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Radial Artery",
+        "location": "Lateral forearm on the thumb side in anatomical position.",
+        "job": "Supplies the lateral forearm and contributes strongly to the deep palmar arch.",
+        "key": "Common site for palpating the wrist pulse.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-22",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Renal Artery",
+        "location": "Paired lateral branches of the abdominal aorta.",
+        "job": "Deliver blood to the kidneys for filtration and tissue perfusion.",
+        "key": "Usually arise inferior to the superior mesenteric artery.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-23",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Splenic Artery",
+        "location": "Tortuous celiac branch along the superior border of the pancreas.",
+        "job": "Supplies spleen and gives branches to pancreas and stomach.",
+        "key": "The spleen lies on the anatomical left.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-24",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Subclavian Artery",
+        "location": "Passes beneath the clavicle toward the upper limb.",
+        "job": "Supplies upper limb and gives branches to neck, brain and thorax.",
+        "key": "Continues as axillary at the lateral border of the first rib.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-25",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Superior Mesenteric Artery",
+        "location": "Anterior aortic branch near L1.",
+        "job": "Supplies midgut, from distal duodenum through proximal two-thirds of transverse colon.",
+        "key": "Passes anterior to the third part of the duodenum.",
+        "aliases": [
+          "SMA"
+        ],
+        "view": 0,
+        "id": "s0-26",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Thoracic Aorta",
+        "location": "Descending aorta in the posterior mediastinum.",
+        "job": "Supplies thoracic wall and organs through segmental and visceral branches.",
+        "key": "Becomes abdominal aorta after passing through the diaphragm at T12.",
+        "aliases": [
+          "Descending Thoracic Aorta"
+        ],
+        "view": 0,
+        "id": "s0-27",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Ulnar Artery",
+        "location": "Medial forearm on the little-finger side.",
+        "job": "Supplies forearm and is the main contributor to the superficial palmar arch.",
+        "key": "Distinguish ulnar (medial) from radial (lateral).",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-28",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Vertebral Artery",
+        "location": "Ascends through cervical transverse foramina and enters the foramen magnum.",
+        "job": "Supplies posterior brain circulation and parts of the spinal cord.",
+        "key": "The two vertebral arteries unite to form the basilar artery.",
+        "aliases": [],
+        "view": 0,
+        "id": "s0-29",
+        "vesselType": "artery"
+      }
+    ]
+  },
+  {
+    "title": "Principal Veins of the Human Body",
+    "subtitle": "Systemic return & the hepatic portal system",
+    "views": [
+      "Whole body",
+      "Abdominal veins",
+      "Posterior thorax"
+    ],
+    "color": "#4589d5",
+    "items": [
+      {
+        "name": "Accessory Hemiazygos Vein",
+        "location": "Upper left posterior thorax.",
+        "job": "Drains several upper left posterior intercostal spaces into the azygos system.",
+        "key": "Crosses the midline to reach the azygos vein; pattern varies.",
+        "aliases": [],
+        "view": 2,
+        "id": "s1-0",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Anterior Tibial Vein",
+        "location": "Deep anterior leg, alongside the corresponding artery.",
+        "job": "Returns blood from the anterior compartment to the popliteal vein.",
+        "key": "Deep limb veins often occur as paired venae comitantes.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-1",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Axillary Vein",
+        "location": "Axilla; formed near the inferior border of teres major.",
+        "job": "Collects blood from the arm and becomes subclavian at the first rib.",
+        "key": "Receives the cephalic vein.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-2",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Azygos Vein",
+        "location": "Right side of the vertebral column in the posterior thorax.",
+        "job": "Drains posterior chest wall into the superior vena cava.",
+        "key": "Arches over the root of the right lung.",
+        "aliases": [],
+        "view": 2,
+        "id": "s1-3",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Basilic Vein",
+        "location": "Superficial medial forearm and arm.",
+        "job": "Drains superficial medial upper limb and joins deep veins to form the axillary vein.",
+        "key": "Basilic is medial; cephalic is lateral.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-4",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Brachial Vein",
+        "location": "Deep arm alongside brachial artery.",
+        "job": "Returns deep upper-limb blood toward the axillary vein.",
+        "key": "Usually paired, unlike the superficial cephalic and basilic veins.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-5",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Brachiocephalic Vein",
+        "location": "Each formed by union of internal jugular and subclavian veins.",
+        "job": "Unites head, neck and upper-limb venous return into the superior vena cava.",
+        "key": "The left crosses the upper mediastinum and is longer.",
+        "aliases": [
+          "Innominate Vein"
+        ],
+        "view": 0,
+        "id": "s1-6",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Cephalic Vein",
+        "location": "Superficial lateral forearm and arm; then deltopectoral groove.",
+        "job": "Drains superficial lateral upper limb to the axillary vein.",
+        "key": "Cephalic is on the thumb side in anatomical position.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-7",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Common Iliac Vein",
+        "location": "Formed by internal and external iliac veins.",
+        "job": "Returns pelvic and lower-limb blood to the inferior vena cava.",
+        "key": "The two common iliac veins unite near L5.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-8",
+        "vesselType": "vein"
+      },
+      {
+        "name": "External Iliac Vein",
+        "location": "Continuation of femoral above the inguinal ligament.",
+        "job": "Returns blood from lower limb toward the common iliac vein.",
+        "key": "Joins internal iliac within the pelvis.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-9",
+        "vesselType": "vein"
+      },
+      {
+        "name": "External Jugular Vein",
+        "location": "Superficial neck, crossing sternocleidomastoid.",
+        "job": "Drains superficial regions of head and neck into subclavian vein.",
+        "key": "More superficial than internal jugular.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-10",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Femoral Vein",
+        "location": "Deep thigh, alongside femoral artery.",
+        "job": "Returns lower-limb blood and receives the great saphenous vein.",
+        "key": "Becomes external iliac at the inguinal ligament.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-11",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Fibular Vein",
+        "location": "Deep leg adjacent to the fibular artery.",
+        "job": "Drains lateral and deep posterior leg toward posterior tibial veins.",
+        "key": "Also called peroneal veins.",
+        "aliases": [
+          "Peroneal Vein"
+        ],
+        "view": 0,
+        "id": "s1-12",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Gonadal Vein",
+        "location": "Ascends from testes or ovaries in the posterior abdomen.",
+        "job": "Returns gonadal blood to the central venous system.",
+        "key": "Right usually drains into IVC; left into left renal vein.",
+        "aliases": [
+          "Testicular Vein",
+          "Ovarian Vein"
+        ],
+        "view": 1,
+        "id": "s1-13",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Great Saphenous Vein",
+        "location": "Superficial medial foot, leg and thigh.",
+        "job": "Returns superficial lower-limb blood to the femoral vein.",
+        "key": "Passes anterior to the medial malleolus; longest vein in the body.",
+        "aliases": [
+          "Long Saphenous Vein"
+        ],
+        "view": 0,
+        "id": "s1-14",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Hemiazygos Vein",
+        "location": "Lower left posterior thorax.",
+        "job": "Drains lower left posterior intercostal spaces into azygos vein.",
+        "key": "Crosses to the right, usually around T8–T9.",
+        "aliases": [],
+        "view": 2,
+        "id": "s1-15",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Hepatic Portal Vein",
+        "location": "Formed mainly by superior mesenteric and splenic veins behind the pancreas.",
+        "job": "Carries nutrient-rich venous blood from digestive organs and spleen to liver sinusoids.",
+        "key": "This is a portal route between two capillary beds, before blood returns to the heart.",
+        "aliases": [
+          "Portal Vein"
+        ],
+        "view": 1,
+        "id": "s1-16",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Hepatic Vein",
+        "location": "Leaves the liver superiorly.",
+        "job": "Drains liver sinusoids directly into the inferior vena cava.",
+        "key": "Hepatic portal brings blood in; hepatic veins take blood out.",
+        "aliases": [
+          "Hepatic Veins"
+        ],
+        "view": 1,
+        "id": "s1-17",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Internal Iliac Vein",
+        "location": "Deep pelvis.",
+        "job": "Drains pelvic viscera, gluteal region and perineum into common iliac vein.",
+        "key": "Runs with the internal iliac arterial distribution.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-18",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Inferior Mesenteric Vein",
+        "location": "Left side of the abdomen.",
+        "job": "Drains hindgut, including descending and sigmoid colon and upper rectum.",
+        "key": "Usually joins the splenic vein.",
+        "aliases": [
+          "IMV"
+        ],
+        "view": 1,
+        "id": "s1-19",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Inferior Vena Cava",
+        "location": "Right of the abdominal aorta; passes through diaphragm at T8.",
+        "job": "Returns blood from below the diaphragm to right atrium.",
+        "key": "Formed by union of common iliac veins.",
+        "aliases": [
+          "IVC"
+        ],
+        "view": 0,
+        "id": "s1-20",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Internal Jugular Vein",
+        "location": "Deep neck within the carotid sheath.",
+        "job": "Drains brain and deep head and neck into brachiocephalic vein.",
+        "key": "Joins subclavian behind the sternoclavicular joint.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-21",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Left Gastric Vein",
+        "location": "Along the lesser curvature of stomach.",
+        "job": "Drains stomach and lower esophagus toward hepatic portal vein.",
+        "key": "Connects with esophageal systemic veins at a portosystemic anastomosis.",
+        "aliases": [],
+        "view": 1,
+        "id": "s1-22",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Median Antebrachial Vein",
+        "location": "Superficial anterior midline of forearm.",
+        "job": "Drains the superficial palm and forearm into variable superficial elbow veins.",
+        "key": "Its termination varies between people.",
+        "aliases": [
+          "Median Vein of Forearm"
+        ],
+        "view": 0,
+        "id": "s1-23",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Median Cubital Vein",
+        "location": "Superficial cubital fossa, anterior to elbow.",
+        "job": "Typically links cephalic and basilic veins.",
+        "key": "Common site of venipuncture; superficial to the bicipital aponeurosis.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-24",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Phrenic Vein",
+        "location": "At the diaphragm; inferior phrenic veins shown here.",
+        "job": "Drains diaphragm into IVC and, on the left, sometimes renal or suprarenal pathways.",
+        "key": "The PDF uses the general term phrenic; superior phrenic veins drain via the azygos system.",
+        "aliases": [
+          "Inferior Phrenic Vein"
+        ],
+        "view": 1,
+        "id": "s1-25",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Popliteal Vein",
+        "location": "Behind the knee; deep in popliteal fossa.",
+        "job": "Collects deep leg veins and continues as femoral vein.",
+        "key": "Also receives the small saphenous vein.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-26",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Posterior Tibial Vein",
+        "location": "Deep posterior leg.",
+        "job": "Returns plantar foot and posterior leg blood toward popliteal vein.",
+        "key": "Accompanies the posterior tibial artery behind the medial malleolus.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-27",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Radial Vein",
+        "location": "Deep lateral forearm.",
+        "job": "Drains deep thumb-side forearm toward brachial veins.",
+        "key": "Paired veins usually accompany the radial artery.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-28",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Renal Vein",
+        "location": "Between kidneys and inferior vena cava.",
+        "job": "Returns filtered blood from kidneys to IVC.",
+        "key": "Left renal vein crosses anterior to the aorta and is longer.",
+        "aliases": [],
+        "view": 1,
+        "id": "s1-29",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Small Saphenous Vein",
+        "location": "Superficial posterior calf; begins on lateral foot.",
+        "job": "Usually drains into popliteal vein.",
+        "key": "Passes posterior to the lateral malleolus.",
+        "aliases": [
+          "Short Saphenous Vein"
+        ],
+        "view": 0,
+        "id": "s1-30",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Splenic Vein",
+        "location": "Behind pancreas, running from spleen toward the midline.",
+        "job": "Drains spleen and receives pancreatic and gastric tributaries.",
+        "key": "Joins superior mesenteric vein to form the portal vein.",
+        "aliases": [],
+        "view": 1,
+        "id": "s1-31",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Subclavian Vein",
+        "location": "Under clavicle; continuation of axillary vein.",
+        "job": "Returns upper-limb blood to brachiocephalic vein.",
+        "key": "Passes anterior to anterior scalene muscle.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-32",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Superior Mesenteric Vein",
+        "location": "Runs in mesentery, generally to the right of the corresponding artery.",
+        "job": "Drains small intestine and proximal large intestine into the portal system.",
+        "key": "Joins splenic vein behind the pancreatic neck.",
+        "aliases": [
+          "SMV"
+        ],
+        "view": 1,
+        "id": "s1-33",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Superior Vena Cava",
+        "location": "Right superior mediastinum.",
+        "job": "Returns systemic venous blood from above the diaphragm to right atrium.",
+        "key": "Receives azygos vein before entering the heart.",
+        "aliases": [
+          "SVC"
+        ],
+        "view": 0,
+        "id": "s1-34",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Suprarenal Vein",
+        "location": "Leaves the adrenal glands above the kidneys.",
+        "job": "Drains adrenal tissue and carries its secreted hormones into circulation.",
+        "key": "Right usually enters IVC directly; left usually enters left renal vein.",
+        "aliases": [
+          "Adrenal Vein"
+        ],
+        "view": 1,
+        "id": "s1-35",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Ulnar Vein",
+        "location": "Deep medial forearm.",
+        "job": "Returns deep little-finger-side forearm blood toward brachial veins.",
+        "key": "Accompanies ulnar artery; distinct from superficial basilic vein.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-36",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Vertebral Vein",
+        "location": "Deep cervical region near vertebral artery.",
+        "job": "Drains cervical vertebral and deep neck networks into brachiocephalic vein.",
+        "key": "Associated with the cervical transverse foramina.",
+        "aliases": [],
+        "view": 0,
+        "id": "s1-37",
+        "vesselType": "vein"
+      }
+    ]
+  },
+  {
+    "title": "Heart Blood Vessels",
+    "subtitle": "Coronary circulation",
+    "views": [
+      "Anterior",
+      "Posterior"
+    ],
+    "color": "#d64b59",
+    "items": [
+      {
+        "name": "Anterior Interventricular Branch of LCA",
+        "location": "Anterior interventricular sulcus, toward apex.",
+        "job": "Supplies anterior ventricular walls and much of the anterior two-thirds of the interventricular septum.",
+        "key": "Often called left anterior descending artery (LAD).",
+        "aliases": [
+          "LAD",
+          "Left Anterior Descending",
+          "Left Anterior Descending Artery",
+          "Anterior Interventricular Artery",
+          "Anterior Interventricular Branch"
+        ],
+        "view": 0,
+        "id": "s2-0",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Coronary Sinus",
+        "location": "Posterior atrioventricular groove.",
+        "job": "Collects most venous blood from myocardium and drains into right atrium.",
+        "key": "Receives great and middle cardiac veins.",
+        "aliases": [],
+        "view": 1,
+        "id": "s2-1",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Great Cardiac Vein",
+        "location": "Alongside LAD anteriorly, then around left atrioventricular groove.",
+        "job": "Returns blood from anterior heart toward coronary sinus.",
+        "key": "Arteries and veins can share the same surface groove.",
+        "aliases": [],
+        "view": 0,
+        "id": "s2-2",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Left Coronary Artery (LCA)",
+        "location": "Short trunk from left aortic sinus, behind pulmonary trunk.",
+        "job": "Supplies much of left heart through anterior interventricular and circumflex branches.",
+        "key": "Left marginal artery usually comes from its circumflex branch.",
+        "aliases": [
+          "LCA",
+          "Left Coronary Artery",
+          "Left Coronary",
+          "Left Main Coronary Artery"
+        ],
+        "view": 0,
+        "id": "s2-3",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Left Marginal Branch of LCA",
+        "location": "Along left (obtuse) margin of heart.",
+        "job": "Supplies lateral wall of left ventricle.",
+        "key": "Typically arises from circumflex branch of LCA.",
+        "aliases": [
+          "Left Marginal Artery",
+          "Left Marginal Branch",
+          "Obtuse Marginal Artery"
+        ],
+        "view": 0,
+        "id": "s2-4",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Left Marginal Vein",
+        "location": "Left margin of heart, near left marginal artery.",
+        "job": "Drains lateral left ventricular wall toward great cardiac vein or coronary sinus.",
+        "key": "Its drainage pattern can vary.",
+        "aliases": [],
+        "view": 0,
+        "id": "s2-5",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Middle Cardiac Vein",
+        "location": "Posterior interventricular sulcus.",
+        "job": "Drains posterior ventricular walls into coronary sinus.",
+        "key": "Accompanies posterior interventricular artery.",
+        "aliases": [
+          "Posterior Interventricular Vein"
+        ],
+        "view": 1,
+        "id": "s2-6",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Posterior Interventricular Branch of RCA",
+        "location": "Posterior interventricular sulcus.",
+        "job": "Supplies inferior ventricular walls and posterior third of interventricular septum.",
+        "key": "Usually arises from RCA (right dominance); origin varies with coronary dominance.",
+        "aliases": [
+          "Posterior Interventricular Artery",
+          "Posterior Descending Artery",
+          "PDA",
+          "Posterior Interventricular Branch"
+        ],
+        "view": 1,
+        "id": "s2-7",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Right Coronary Artery (RCA)",
+        "location": "From right aortic sinus along right atrioventricular groove.",
+        "job": "Supplies much of right heart and commonly the SA and AV nodes.",
+        "key": "Its posterior interventricular branch is present in right-dominant circulation.",
+        "aliases": [
+          "RCA",
+          "Right Coronary Artery",
+          "Right Coronary"
+        ],
+        "view": 0,
+        "id": "s2-8",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Right Marginal Branch of RCA",
+        "location": "Along the right (acute) margin of heart.",
+        "job": "Supplies right ventricular free wall.",
+        "key": "A branch of the right coronary artery.",
+        "aliases": [
+          "Right Marginal Artery",
+          "Right Marginal Branch",
+          "Acute Marginal Artery"
+        ],
+        "view": 0,
+        "id": "s2-9",
+        "vesselType": "artery"
+      }
+    ]
+  },
+  {
+    "title": "The Human Heart",
+    "subtitle": "Chambers, valves & the heart wall",
+    "views": [
+      "Sectioned heart",
+      "Heart wall"
+    ],
+    "color": "#b77bdd",
+    "items": [
+      {
+        "name": "Aorta",
+        "location": "Leaves left ventricle through aortic valve.",
+        "job": "Distributes oxygenated blood to systemic circulation.",
+        "key": "Elastic recoil helps maintain flow between ventricular contractions.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-0",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Aortic Valve",
+        "location": "Between left ventricle and aortic root.",
+        "job": "Prevents aortic backflow into left ventricle during diastole.",
+        "key": "Semilunar valve with three cusps; has no chordae tendineae.",
+        "aliases": [
+          "Aortic Semilunar Valve"
+        ],
+        "view": 0,
+        "id": "s3-1",
+        "vesselType": null
+      },
+      {
+        "name": "Bicuspid Valve",
+        "location": "Between left atrium and left ventricle.",
+        "job": "Prevents backflow into left atrium during ventricular systole.",
+        "key": "Also called mitral or left atrioventricular valve.",
+        "aliases": [
+          "Mitral Valve",
+          "Left Atrioventricular Valve",
+          "Left AV Valve"
+        ],
+        "view": 0,
+        "id": "s3-2",
+        "vesselType": null
+      },
+      {
+        "name": "Chordae Tendineae",
+        "location": "Fibrous cords joining AV valve leaflets to papillary muscles.",
+        "job": "Tension prevents valve leaflets prolapsing into atria during systole.",
+        "key": "They stabilize AV valves; they do not pull valves open.",
+        "aliases": [
+          "Chordae",
+          "Tendinous Cords"
+        ],
+        "view": 0,
+        "id": "s3-3",
+        "vesselType": null
+      },
+      {
+        "name": "Endocardium",
+        "location": "Innermost heart lining; continuous with vascular endothelium.",
+        "job": "Provides a smooth blood-contacting surface lining chambers and valves.",
+        "key": "Inner to myocardium.",
+        "aliases": [],
+        "view": 1,
+        "id": "s3-4",
+        "vesselType": null
+      },
+      {
+        "name": "Epicardium",
+        "location": "Outer surface of heart; visceral layer of serous pericardium.",
+        "job": "Protects heart surface and participates in a low-friction interface.",
+        "key": "Coronary vessels course in connective tissue beneath its surface.",
+        "aliases": [
+          "Visceral Pericardium",
+          "Visceral Layer of Serous Pericardium"
+        ],
+        "view": 1,
+        "id": "s3-5",
+        "vesselType": null
+      },
+      {
+        "name": "Inferior Vena Cava",
+        "location": "Enters right atrium inferiorly.",
+        "job": "Returns systemic venous blood from below the diaphragm.",
+        "key": "Empties into right atrium, not a ventricle.",
+        "aliases": [
+          "IVC"
+        ],
+        "view": 0,
+        "id": "s3-6",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Interventricular Septum",
+        "location": "Muscular partition between right and left ventricles.",
+        "job": "Separates ventricular blood and carries part of the conduction system.",
+        "key": "Includes a small superior membranous part.",
+        "aliases": [
+          "Ventricular Septum"
+        ],
+        "view": 0,
+        "id": "s3-7",
+        "vesselType": null
+      },
+      {
+        "name": "Left Atrium",
+        "location": "Posterior receiving chamber on the anatomical left.",
+        "job": "Receives oxygenated pulmonary venous blood and feeds left ventricle.",
+        "key": "Its auricle contains pectinate muscles.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-8",
+        "vesselType": null
+      },
+      {
+        "name": "Left Ventricle",
+        "location": "Thick-walled chamber forming the apex.",
+        "job": "Pumps blood into aorta against systemic resistance.",
+        "key": "Its myocardium is thicker than the right ventricular wall.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-9",
+        "vesselType": null
+      },
+      {
+        "name": "Myocardium",
+        "location": "Middle, muscular layer of heart wall.",
+        "job": "Cardiac muscle contraction generates pumping pressure.",
+        "key": "Thickest in the left ventricle.",
+        "aliases": [],
+        "view": 1,
+        "id": "s3-10",
+        "vesselType": null
+      },
+      {
+        "name": "Papillary Muscle",
+        "location": "Muscular projections from ventricular walls.",
+        "job": "Contract to tension chordae and prevent AV valve prolapse during systole.",
+        "key": "Work with chordae; not attached to semilunar valves.",
+        "aliases": [
+          "Papillary Muscles"
+        ],
+        "view": 0,
+        "id": "s3-11",
+        "vesselType": null
+      },
+      {
+        "name": "Pectinate Muscle",
+        "location": "Ridges in atrial wall, especially right atrium and both auricles.",
+        "job": "Contribute to atrial contraction.",
+        "key": "Do not confuse atrial pectinate muscles with ventricular trabeculae carneae.",
+        "aliases": [
+          "Pectinate Muscles"
+        ],
+        "view": 0,
+        "id": "s3-12",
+        "vesselType": null
+      },
+      {
+        "name": "Pulmonary Artery",
+        "location": "Paired branches of pulmonary trunk leading to lungs.",
+        "job": "Carry relatively deoxygenated blood toward pulmonary capillaries.",
+        "key": "Artery means away from heart, not necessarily oxygenated.",
+        "aliases": [
+          "Pulmonary Arteries",
+          "Left Pulmonary Artery",
+          "Right Pulmonary Artery"
+        ],
+        "view": 0,
+        "id": "s3-13",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Pulmonary Valve",
+        "location": "Between right ventricle and pulmonary trunk.",
+        "job": "Prevents backflow from pulmonary trunk into right ventricle.",
+        "key": "Three-cusp semilunar valve, without chordae.",
+        "aliases": [
+          "Pulmonic Valve",
+          "Pulmonary Semilunar Valve"
+        ],
+        "view": 0,
+        "id": "s3-14",
+        "vesselType": null
+      },
+      {
+        "name": "Pulmonary Trunk",
+        "location": "Large vessel leaving right ventricle, anterior to aortic root.",
+        "job": "Carries right ventricular output before splitting into pulmonary arteries.",
+        "key": "Distinguish the single trunk from its right and left arterial branches.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-15",
+        "vesselType": "artery"
+      },
+      {
+        "name": "Pulmonary Vein",
+        "location": "Usually four vessels entering posterior left atrium.",
+        "job": "Return oxygenated blood from lungs.",
+        "key": "Vein means toward heart, not necessarily deoxygenated.",
+        "aliases": [
+          "Pulmonary Veins"
+        ],
+        "view": 0,
+        "id": "s3-16",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Right Atrium",
+        "location": "Receiving chamber on anatomical right.",
+        "job": "Receives superior and inferior venae cavae and coronary sinus; passes blood through tricuspid valve.",
+        "key": "The SA node is near the superior vena cava opening.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-17",
+        "vesselType": null
+      },
+      {
+        "name": "Right Ventricle",
+        "location": "Anterior chamber; thinner wall than left ventricle.",
+        "job": "Pumps relatively deoxygenated blood through pulmonary valve toward lungs.",
+        "key": "Faces a lower-pressure circuit than the left ventricle.",
+        "aliases": [],
+        "view": 0,
+        "id": "s3-18",
+        "vesselType": null
+      },
+      {
+        "name": "Superior Vena Cava",
+        "location": "Enters right atrium superiorly.",
+        "job": "Returns systemic venous blood from head, neck, upper limbs and thorax.",
+        "key": "Distinct from pulmonary veins, which enter left atrium.",
+        "aliases": [
+          "SVC"
+        ],
+        "view": 0,
+        "id": "s3-19",
+        "vesselType": "vein"
+      },
+      {
+        "name": "Tricuspid Valve",
+        "location": "Between right atrium and right ventricle.",
+        "job": "Prevents backflow into right atrium during ventricular systole.",
+        "key": "Right AV valve with three principal leaflets.",
+        "aliases": [
+          "Right Atrioventricular Valve",
+          "Right AV Valve"
+        ],
+        "view": 0,
+        "id": "s3-20",
+        "vesselType": null
+      }
+    ]
+  }
 ];
-function add(s,name,path,location,job,key,aliases='',view=0,color='') {sections[s].items.push({name,path,location,job,key,aliases:aliases.split('|').filter(Boolean),view,color:color||sections[s].color});}
-// Body diagrams use anatomical right on the viewer's left.
-add(0,'Abdominal Aorta','M310 330 L310 470','Retroperitoneal; from the diaphragm at T12 to the L4 bifurcation.','Distributes systemic blood to abdominal organs, the pelvis and lower limbs.','Its paired common iliac branches begin at about L4.');
-add(0,'Anterior Tibial Artery','M270 658 L253 787','Anterior compartment of the leg, after crossing the interosseous membrane.','Supplies anterior leg muscles and continues as dorsalis pedis on the foot.','A branch of the popliteal artery.');
-add(0,'Aortic Arch','M279 264 C262 214 306 210 320 251','Superior mediastinum; curves above the heart.','Distributes blood to the head, neck and upper limbs and continues as descending aorta.','Typical branches: brachiocephalic trunk, left common carotid and left subclavian.');
-add(0,'Arcuate Artery','M251 803 Q239 791 222 806','Dorsum of the foot, near the bases of the metatarsals.','Gives dorsal metatarsal branches that help supply the toes.','Here interpreted as the foot artery, a branch of dorsalis pedis; the PDF does not specify foot versus renal arcuate arteries.');
-add(0,'Ascending Aorta','M279 292 L279 263','Leaves the left ventricle and rises within the pericardium.','Carries oxygenated blood from the left ventricle into systemic circulation.','The coronary arteries originate at its root.');
-add(0,'Brachial Artery','M205 283 L172 407','Anterior arm; continuation of the axillary artery beyond teres major.','Supplies the arm before dividing into radial and ulnar arteries near the elbow.','Used when measuring blood pressure at the arm.');
-add(0,'Brachiocephalic Artery','M285 229 L263 197','First typical branch of the aortic arch, on the right.','Feeds the right common carotid and right subclavian arteries.','There is normally no left brachiocephalic artery.','Brachiocephalic Trunk|Innominate Artery');
-add(0,'Celiac Trunk','M310 350 L286 350','Short anterior branch of the abdominal aorta near T12.','Supplies foregut derivatives through gastric, splenic and hepatic branches.','Its three classic branches are left gastric, splenic and common hepatic.');
-add(0,'Common Carotid Artery','M263 197 L263 151','Ascends in the neck within the carotid sheath.','Provides the inflow that divides into internal and external carotid arteries.','The right arises from the brachiocephalic trunk; the left usually from the arch.');
-add(0,'Common Hepatic Artery','M286 350 Q263 355 246 341','Runs from the celiac trunk toward the liver on the anatomical right.','Supplies the liver and, through branches, parts of the stomach, duodenum and pancreas.','The proper hepatic artery continues toward the liver.');
-add(0,'Common Iliac Artery','M310 470 L273 502 M310 470 L349 502','Paired terminal branches of the abdominal aorta.','Deliver blood to internal and external iliac arteries.','Distinguish common iliac from its pelvic and lower-limb branches.');
-add(0,'External Carotid Artery','M263 151 L249 125 L245 106','Anterior branch at the common carotid bifurcation.','Supplies much of the face, scalp and superficial head and neck.','Unlike internal carotid, it gives multiple branches in the neck.');
-add(0,'External Iliac Artery','M273 502 L259 539 M349 502 L362 539','Along the pelvic brim; passes beneath the inguinal ligament.','Main arterial route from the pelvis into the lower limb.','Becomes the femoral artery at the inguinal ligament.');
-add(0,'Femoral Artery','M259 539 L271 626 M362 539 L350 626','Anterior thigh, including the femoral triangle.','Supplies the lower limb directly and through branches such as profunda femoris.','Becomes popliteal after passing through the adductor hiatus.');
-add(0,'Fibular Artery','M285 680 L283 770','Deep posterior leg, close to the fibula.','Supplies deep posterior and lateral leg structures.','Usually branches from posterior tibial via the tibioperoneal trunk.','Peroneal Artery');
-add(0,'Inferior Mesenteric Artery','M310 428 Q344 432 340 459','Anterior abdominal aorta, usually around L3.','Supplies hindgut: distal transverse colon through the upper rectum.','The superior mesenteric artery supplies the midgut.','IMA');
-add(0,'Internal Carotid Artery','M263 151 L279 126 L279 100','Deep neck; enters the skull through the carotid canal.','Supplies the anterior cerebral circulation and the orbit.','Normally gives no branches in the neck.');
-add(0,'Internal Iliac Artery','M273 502 L291 527 M349 502 L331 527','Branches medially into the pelvis.','Supplies pelvic organs, gluteal region and perineum.','External iliac is the major route to the lower limb.');
-add(0,'Left Gastric Artery','M286 350 Q287 331 302 326','Small celiac branch running toward the lesser curvature of the stomach.','Supplies the lower esophagus and lesser curvature.','Anastomoses with the right gastric artery.');
-add(0,'Palmar Arch','M134 522 Q148 538 165 522','Palm; superficial and deep arterial arches.','Connects radial and ulnar circulations and supplies digital branches.','The superficial arch is mainly ulnar; the deep arch mainly radial.','Superficial Palmar Arch|Deep Palmar Arch');
-add(0,'Popliteal Artery','M271 626 L270 658','Behind the knee in the popliteal fossa.','Supplies the knee region and gives rise to the major leg arteries.','Continuation of femoral after the adductor hiatus.');
-add(0,'Posterior Tibial Artery','M270 658 L297 691 L297 787','Posterior leg; passes behind the medial malleolus.','Supplies posterior leg and plantar foot.','Its pulse is felt behind the medial ankle.');
-add(0,'Radial Artery','M172 407 L133 513','Lateral forearm on the thumb side in anatomical position.','Supplies the lateral forearm and contributes strongly to the deep palmar arch.','Common site for palpating the wrist pulse.');
-add(0,'Renal Artery','M310 382 L263 382 M310 382 L359 382','Paired lateral branches of the abdominal aorta.','Deliver blood to the kidneys for filtration and tissue perfusion.','Usually arise inferior to the superior mesenteric artery.');
-add(0,'Splenic Artery','M286 350 Q317 344 328 357 T363 354','Tortuous celiac branch along the superior border of the pancreas.','Supplies spleen and gives branches to pancreas and stomach.','The spleen lies on the anatomical left.');
-add(0,'Subclavian Artery','M263 197 Q227 204 206 245 M309 226 Q365 198 404 245','Passes beneath the clavicle toward the upper limb.','Supplies upper limb and gives branches to neck, brain and thorax.','Continues as axillary at the lateral border of the first rib.');
-add(0,'Superior Mesenteric Artery','M310 366 Q337 387 333 414','Anterior aortic branch near L1.','Supplies midgut, from distal duodenum through proximal two-thirds of transverse colon.','Passes anterior to the third part of the duodenum.','SMA');
-add(0,'Thoracic Aorta','M320 251 L320 330','Descending aorta in the posterior mediastinum.','Supplies thoracic wall and organs through segmental and visceral branches.','Becomes abdominal aorta after passing through the diaphragm at T12.','Descending Thoracic Aorta');
-add(0,'Ulnar Artery','M172 407 L165 513','Medial forearm on the little-finger side.','Supplies forearm and is the main contributor to the superficial palmar arch.','Distinguish ulnar (medial) from radial (lateral).');
-add(0,'Vertebral Artery','M235 208 L294 170 L294 112','Ascends through cervical transverse foramina and enters the foramen magnum.','Supplies posterior brain circulation and parts of the spinal cord.','The two vertebral arteries unite to form the basilar artery.');
-add(1,'Accessory Hemiazygos Vein','M400 240 L400 370 L280 390','Upper left posterior thorax.','Drains several upper left posterior intercostal spaces into the azygos system.','Crosses the midline to reach the azygos vein; pattern varies.','',2);
-add(1,'Anterior Tibial Vein','M253 787 L269 660','Deep anterior leg, alongside the corresponding artery.','Returns blood from the anterior compartment to the popliteal vein.','Deep limb veins often occur as paired venae comitantes.');
-add(1,'Axillary Vein','M204 286 L218 242','Axilla; formed near the inferior border of teres major.','Collects blood from the arm and becomes subclavian at the first rib.','Receives the cephalic vein.');
-add(1,'Azygos Vein','M280 620 L280 230 Q280 200 230 220','Right side of the vertebral column in the posterior thorax.','Drains posterior chest wall into the superior vena cava.','Arches over the root of the right lung.','',2);
-add(1,'Basilic Vein','M176 421 L203 309 L204 286','Superficial medial forearm and arm.','Drains superficial medial upper limb and joins deep veins to form the axillary vein.','Basilic is medial; cephalic is lateral.');
-add(1,'Brachial Vein','M172 404 L204 286','Deep arm alongside brachial artery.','Returns deep upper-limb blood toward the axillary vein.','Usually paired, unlike the superficial cephalic and basilic veins.');
-add(1,'Brachiocephalic Vein','M263 208 L280 243 M352 208 L280 243','Each formed by union of internal jugular and subclavian veins.','Unites head, neck and upper-limb venous return into the superior vena cava.','The left crosses the upper mediastinum and is longer.','Innominate Vein');
-add(1,'Cephalic Vein','M131 474 L153 347 Q170 244 218 242','Superficial lateral forearm and arm; then deltopectoral groove.','Drains superficial lateral upper limb to the axillary vein.','Cephalic is on the thumb side in anatomical position.');
-add(1,'Common Iliac Vein','M274 504 L300 470 M348 504 L300 470','Formed by internal and external iliac veins.','Returns pelvic and lower-limb blood to the inferior vena cava.','The two common iliac veins unite near L5.');
-add(1,'External Iliac Vein','M259 540 L274 504 M362 540 L348 504','Continuation of femoral above the inguinal ligament.','Returns blood from lower limb toward the common iliac vein.','Joins internal iliac within the pelvis.');
-add(1,'External Jugular Vein','M240 138 L228 216','Superficial neck, crossing sternocleidomastoid.','Drains superficial regions of head and neck into subclavian vein.','More superficial than internal jugular.');
-add(1,'Femoral Vein','M272 628 L259 540 M350 628 L362 540','Deep thigh, alongside femoral artery.','Returns lower-limb blood and receives the great saphenous vein.','Becomes external iliac at the inguinal ligament.');
-add(1,'Fibular Vein','M284 774 L285 687','Deep leg adjacent to the fibular artery.','Drains lateral and deep posterior leg toward posterior tibial veins.','Also called peroneal veins.','Peroneal Vein');
-add(1,'Gonadal Vein','M285 633 L250 413 M375 632 L375 394','Ascends from testes or ovaries in the posterior abdomen.','Returns gonadal blood to the central venous system.','Right usually drains into IVC; left into left renal vein.','Testicular Vein|Ovarian Vein',1);
-add(1,'Great Saphenous Vein','M300 794 L305 675 Q305 581 259 544','Superficial medial foot, leg and thigh.','Returns superficial lower-limb blood to the femoral vein.','Passes anterior to the medial malleolus; longest vein in the body.','Long Saphenous Vein');
-add(1,'Hemiazygos Vein','M400 623 L400 456 L280 430','Lower left posterior thorax.','Drains lower left posterior intercostal spaces into azygos vein.','Crosses to the right, usually around T8–T9.','',2);
-add(1,'Hepatic Portal Vein','M358 452 L292 326 L222 308','Formed mainly by superior mesenteric and splenic veins behind the pancreas.','Carries nutrient-rich venous blood from digestive organs and spleen to liver sinusoids.','This is a portal route between two capillary beds, before blood returns to the heart.','Portal Vein',1,'#9872d3');
-add(1,'Hepatic Vein','M185 278 L250 250 M214 300 L250 275','Leaves the liver superiorly.','Drains liver sinusoids directly into the inferior vena cava.','Hepatic portal brings blood in; hepatic veins take blood out.','Hepatic Veins',1);
-add(1,'Internal Iliac Vein','M292 529 L274 504 M330 529 L348 504','Deep pelvis.','Drains pelvic viscera, gluteal region and perineum into common iliac vein.','Runs with the internal iliac arterial distribution.');
-add(1,'Inferior Mesenteric Vein','M454 597 L435 463 L405 438','Left side of the abdomen.','Drains hindgut, including descending and sigmoid colon and upper rectum.','Usually joins the splenic vein.','IMV',1,'#9872d3');
-add(1,'Inferior Vena Cava','M300 470 L300 314','Right of the abdominal aorta; passes through diaphragm at T8.','Returns blood from below the diaphragm to right atrium.','Formed by union of common iliac veins.','IVC');
-add(1,'Internal Jugular Vein','M263 120 L263 208','Deep neck within the carotid sheath.','Drains brain and deep head and neck into brachiocephalic vein.','Joins subclavian behind the sternoclavicular joint.');
-add(1,'Left Gastric Vein','M350 345 L319 373','Along the lesser curvature of stomach.','Drains stomach and lower esophagus toward hepatic portal vein.','Connects with esophageal systemic veins at a portosystemic anastomosis.','',1,'#9872d3');
-add(1,'Median Antebrachial Vein','M148 512 L158 435','Superficial anterior midline of forearm.','Drains the superficial palm and forearm into variable superficial elbow veins.','Its termination varies between people.','Median Vein of Forearm');
-add(1,'Median Cubital Vein','M152 407 L177 429','Superficial cubital fossa, anterior to elbow.','Typically links cephalic and basilic veins.','Common site of venipuncture; superficial to the bicipital aponeurosis.');
-add(1,'Phrenic Vein','M190 205 L250 220 M430 205 L250 232','At the diaphragm; inferior phrenic veins shown here.','Drains diaphragm into IVC and, on the left, sometimes renal or suprarenal pathways.','The PDF uses the general term phrenic; superior phrenic veins drain via the azygos system.','Inferior Phrenic Vein',1);
-add(1,'Popliteal Vein','M269 660 L272 628','Behind the knee; deep in popliteal fossa.','Collects deep leg veins and continues as femoral vein.','Also receives the small saphenous vein.');
-add(1,'Posterior Tibial Vein','M295 790 L295 696 L269 660','Deep posterior leg.','Returns plantar foot and posterior leg blood toward popliteal vein.','Accompanies the posterior tibial artery behind the medial malleolus.');
-add(1,'Radial Vein','M135 516 L172 404','Deep lateral forearm.','Drains deep thumb-side forearm toward brachial veins.','Paired veins usually accompany the radial artery.');
-add(1,'Renal Vein','M174 395 L250 395 M425 395 L250 395','Between kidneys and inferior vena cava.','Returns filtered blood from kidneys to IVC.','Left renal vein crosses anterior to the aorta and is longer.','',1);
-add(1,'Small Saphenous Vein','M364 788 L369 712 L350 637','Superficial posterior calf; begins on lateral foot.','Usually drains into popliteal vein.','Passes posterior to the lateral malleolus.','Short Saphenous Vein');
-add(1,'Splenic Vein','M479 422 L358 452','Behind pancreas, running from spleen toward the midline.','Drains spleen and receives pancreatic and gastric tributaries.','Joins superior mesenteric vein to form the portal vein.','',1,'#9872d3');
-add(1,'Subclavian Vein','M218 242 L263 208 M404 242 L352 208','Under clavicle; continuation of axillary vein.','Returns upper-limb blood to brachiocephalic vein.','Passes anterior to anterior scalene muscle.');
-add(1,'Superior Mesenteric Vein','M358 614 L358 452','Runs in mesentery, generally to the right of the corresponding artery.','Drains small intestine and proximal large intestine into the portal system.','Joins splenic vein behind the pancreatic neck.','SMV',1,'#9872d3');
-add(1,'Superior Vena Cava','M280 243 L280 292','Right superior mediastinum.','Returns systemic venous blood from above the diaphragm to right atrium.','Receives azygos vein before entering the heart.','SVC');
-add(1,'Suprarenal Vein','M183 352 L250 346 M431 352 L397 395','Leaves the adrenal glands above the kidneys.','Drains adrenal tissue and carries its secreted hormones into circulation.','Right usually enters IVC directly; left usually enters left renal vein.','Adrenal Vein',1);
-add(1,'Ulnar Vein','M165 516 L172 404','Deep medial forearm.','Returns deep little-finger-side forearm blood toward brachial veins.','Accompanies ulnar artery; distinct from superficial basilic vein.');
-add(1,'Vertebral Vein','M293 115 L293 177 L263 208','Deep cervical region near vertebral artery.','Drains cervical vertebral and deep neck networks into brachiocephalic vein.','Associated with the cervical transverse foramina.');
-add(2,'Anterior Interventricular Branch of LCA','M326 310 Q296 439 364 617','Anterior interventricular sulcus, toward apex.','Supplies anterior ventricular walls and much of the anterior two-thirds of the interventricular septum.','Often called left anterior descending artery (LAD).','LAD|Left Anterior Descending|Left Anterior Descending Artery|Anterior Interventricular Artery|Anterior Interventricular Branch');
-add(2,'Coronary Sinus','M174 340 Q299 395 444 331','Posterior atrioventricular groove.','Collects most venous blood from myocardium and drains into right atrium.','Receives great and middle cardiac veins.','',1,'#4589d5');
-add(2,'Great Cardiac Vein','M384 609 Q324 449 346 322 Q398 295 452 325','Alongside LAD anteriorly, then around left atrioventricular groove.','Returns blood from anterior heart toward coronary sinus.','Arteries and veins can share the same surface groove.','','0','#4589d5');
-add(2,'Left Coronary Artery (LCA)','M300 240 L326 310','Short trunk from left aortic sinus, behind pulmonary trunk.','Supplies much of left heart through anterior interventricular and circumflex branches.','Left marginal artery usually comes from its circumflex branch.','LCA|Left Coronary Artery|Left Coronary|Left Main Coronary Artery');
-add(2,'Left Marginal Branch of LCA','M433 343 Q477 439 406 568','Along left (obtuse) margin of heart.','Supplies lateral wall of left ventricle.','Typically arises from circumflex branch of LCA.','Left Marginal Artery|Left Marginal Branch|Obtuse Marginal Artery');
-add(2,'Left Marginal Vein','M450 351 Q499 441 425 568','Left margin of heart, near left marginal artery.','Drains lateral left ventricular wall toward great cardiac vein or coronary sinus.','Its drainage pattern can vary.','',0,'#4589d5');
-add(2,'Middle Cardiac Vein','M338 610 L302 463 L291 369','Posterior interventricular sulcus.','Drains posterior ventricular walls into coronary sinus.','Accompanies posterior interventricular artery.','Posterior Interventricular Vein',1,'#4589d5');
-add(2,'Posterior Interventricular Branch of RCA','M315 367 L327 470 L363 612','Posterior interventricular sulcus.','Supplies inferior ventricular walls and posterior third of interventricular septum.','Usually arises from RCA (right dominance); origin varies with coronary dominance.','Posterior Interventricular Artery|Posterior Descending Artery|PDA|Posterior Interventricular Branch',1);
-add(2,'Right Coronary Artery (RCA)','M256 246 Q204 264 179 332 Q210 370 259 372','From right aortic sinus along right atrioventricular groove.','Supplies much of right heart and commonly the SA and AV nodes.','Its posterior interventricular branch is present in right-dominant circulation.','RCA|Right Coronary Artery|Right Coronary');
-add(2,'Right Marginal Branch of RCA','M186 343 Q195 459 305 549','Along the right (acute) margin of heart.','Supplies right ventricular free wall.','A branch of the right coronary artery.','Right Marginal Artery|Right Marginal Branch|Acute Marginal Artery');
-add(3,'Aorta','M336 331 L336 199 Q336 120 415 153 L430 248','Leaves left ventricle through aortic valve.','Distributes oxygenated blood to systemic circulation.','Elastic recoil helps maintain flow between ventricular contractions.');
-add(3,'Aortic Valve','M319 333 Q336 351 353 333','Between left ventricle and aortic root.','Prevents aortic backflow into left ventricle during diastole.','Semilunar valve with three cusps; has no chordae tendineae.','Aortic Semilunar Valve');
-add(3,'Bicuspid Valve','M359 376 L387 410 M411 378 L395 410','Between left atrium and left ventricle.','Prevents backflow into left atrium during ventricular systole.','Also called mitral or left atrioventricular valve.','Mitral Valve|Left Atrioventricular Valve|Left AV Valve');
-add(3,'Chordae Tendineae','M387 410 L377 474 M395 410 L402 473 M226 414 L237 470','Fibrous cords joining AV valve leaflets to papillary muscles.','Tension prevents valve leaflets prolapsing into atria during systole.','They stabilize AV valves; they do not pull valves open.','Chordae|Tendinous Cords');
-add(3,'Endocardium','M180 370 L450 370','Innermost heart lining; continuous with vascular endothelium.','Provides a smooth blood-contacting surface lining chambers and valves.','Inner to myocardium.','',1,'#edc877');
-add(3,'Epicardium','M180 225 L450 225','Outer surface of heart; visceral layer of serous pericardium.','Protects heart surface and participates in a low-friction interface.','Coronary vessels course in connective tissue beneath its surface.','Visceral Pericardium|Visceral Layer of Serous Pericardium',1,'#ad7dda');
-add(3,'Inferior Vena Cava','M177 497 L177 367','Enters right atrium inferiorly.','Returns systemic venous blood from below the diaphragm.','Empties into right atrium, not a ventricle.','IVC');
-add(3,'Interventricular Septum','M309 393 Q295 506 345 586','Muscular partition between right and left ventricles.','Separates ventricular blood and carries part of the conduction system.','Includes a small superior membranous part.','Ventricular Septum');
-add(3,'Left Atrium','M365 282 Q432 257 447 314 Q454 356 408 367 L360 353 Z','Posterior receiving chamber on the anatomical left.','Receives oxygenated pulmonary venous blood and feeds left ventricle.','Its auricle contains pectinate muscles.');
-add(3,'Left Ventricle','M357 420 Q418 391 440 451 Q453 523 364 582 Q328 493 357 420 Z','Thick-walled chamber forming the apex.','Pumps blood into aorta against systemic resistance.','Its myocardium is thicker than the right ventricular wall.');
-add(3,'Myocardium','M180 295 L450 295','Middle, muscular layer of heart wall.','Cardiac muscle contraction generates pumping pressure.','Thickest in the left ventricle.','',1,'#d64b59');
-add(3,'Papillary Muscle','M377 475 L368 502 M402 475 L412 502 M237 470 L247 498','Muscular projections from ventricular walls.','Contract to tension chordae and prevent AV valve prolapse during systole.','Work with chordae; not attached to semilunar valves.','Papillary Muscles');
-add(3,'Pectinate Muscle','M193 299 L221 324 M190 320 L219 345 M190 340 L214 362','Ridges in atrial wall, especially right atrium and both auricles.','Contribute to atrial contraction.','Do not confuse atrial pectinate muscles with ventricular trabeculae carneae.','Pectinate Muscles');
-add(3,'Pulmonary Artery','M285 224 L219 210 M285 224 L402 217','Paired branches of pulmonary trunk leading to lungs.','Carry relatively deoxygenated blood toward pulmonary capillaries.','Artery means away from heart, not necessarily oxygenated.','Pulmonary Arteries|Left Pulmonary Artery|Right Pulmonary Artery');
-add(3,'Pulmonary Valve','M268 346 Q285 365 302 346','Between right ventricle and pulmonary trunk.','Prevents backflow from pulmonary trunk into right ventricle.','Three-cusp semilunar valve, without chordae.','Pulmonic Valve|Pulmonary Semilunar Valve');
-add(3,'Pulmonary Trunk','M285 345 L285 224','Large vessel leaving right ventricle, anterior to aortic root.','Carries right ventricular output before splitting into pulmonary arteries.','Distinguish the single trunk from its right and left arterial branches.');
-add(3,'Pulmonary Vein','M490 286 L439 304 M490 330 L439 341','Usually four vessels entering posterior left atrium.','Return oxygenated blood from lungs.','Vein means toward heart, not necessarily deoxygenated.','Pulmonary Veins');
-add(3,'Right Atrium','M176 271 Q227 256 251 296 L247 365 Q180 389 168 347 Z','Receiving chamber on anatomical right.','Receives superior and inferior venae cavae and coronary sinus; passes blood through tricuspid valve.','The SA node is near the superior vena cava opening.');
-add(3,'Right Ventricle','M183 415 Q216 400 276 413 L298 547 Q208 526 183 415 Z','Anterior chamber; thinner wall than left ventricle.','Pumps relatively deoxygenated blood through pulmonary valve toward lungs.','Faces a lower-pressure circuit than the left ventricle.');
-add(3,'Superior Vena Cava','M178 181 L178 271','Enters right atrium superiorly.','Returns systemic venous blood from head, neck, upper limbs and thorax.','Distinct from pulmonary veins, which enter left atrium.','SVC');
-add(3,'Tricuspid Valve','M189 387 L215 414 M218 388 L226 415 M246 385 L237 412','Between right atrium and right ventricle.','Prevents backflow into right atrium during ventricular systole.','Right AV valve with three principal leaflets.','Right Atrioventricular Valve|Right AV Valve');
-sections.forEach((s,si)=>s.items.forEach((item,i)=>{item.id=`s${si}-${i}`;item.view=Number(item.view);}));
-// Pulmonary vessels are colored by oxygenation, as are systemic vessels.
-for(const item of sections[3].items){if(['Aorta','Pulmonary Vein'].includes(item.name))item.color='#d64b59';if(['Inferior Vena Cava','Superior Vena Cava','Pulmonary Artery','Pulmonary Trunk'].includes(item.name))item.color='#4589d5';}

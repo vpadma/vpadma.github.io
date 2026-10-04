@@ -8,7 +8,7 @@ An interactive study page for the cardiovascular terms in **Anatomy Terms for La
 
 Use the link above in a modern desktop or mobile browser. No account or installation is needed.
 
-To study offline, download or clone this repository and open this folder’s `index.html` in your browser. Keep `index.html`, `style.css`, `data.js`, and `app.js` together. The page does not require a server or internet connection once these files are downloaded.
+To study offline, download or clone this repository and open this folder’s `index.html` in your browser. Keep this entire folder, including `atlas.js` and the `plates/` directory, together. The page does not require a server or internet connection once these files are downloaded.
 
 ## Choose a section
 
@@ -24,17 +24,18 @@ There are **99 entries** in total. Some structures appear in more than one secti
 ## Learning mode
 
 1. Select a tab and leave **Learn** selected.
-2. Click or tap a vessel or structure in the diagram. You can also choose its name from **Structures in this section** below the diagram.
+2. Click or tap a teal target marker on the diagram. You can also choose its name from **Structures in this section** below the diagram.
 3. Read the detail panel for its name, location, function, and a key identification note.
 4. Where available, use the view buttons above the diagram to switch between anatomical regions or surfaces. Choosing a term automatically opens its matching view.
-5. Use **+** to zoom toward the selected structure, **−** to zoom out, and **Fit** to restore the full diagram.
+5. Select **Show labels** to see the source illustration’s labels; **Hide labels** restores the target view.
+6. Use **+** to zoom toward the selected structure, **−** to zoom out, and **Fit** to restore the full diagram.
 
-The gold highlight marks your selection. In anterior diagrams, the person’s anatomical right is on your left; check the orientation note beneath each diagram. Vessel colors distinguish relatively oxygen-rich and oxygen-poor blood, while purple also identifies tissue or portal structures. The pulmonary arteries therefore appear blue and pulmonary veins red.
+The gold ring marks your selection; its center identifies the target. In anterior diagrams, the person’s anatomical right is on your left; check the orientation note beneath each diagram. Most plates show systemic arteries in red and veins in blue. Pulmonary arteries appear blue and pulmonary veins red. Portal plates use colors to distinguish tributaries, and the 3D models have their own tissue colors; read the note below each plate.
 
 ## Quiz mode
 
 1. Choose the section to practice, then select **Quiz yourself**.
-2. Identify the structure marked by the gold highlight and white target dot. Use the zoom controls if needed.
+2. Identify the structure marked by the gold ring. Use the zoom controls if needed.
 3. Type its name and select **Check answer**, or press **Enter**.
 4. Read the feedback, then select **Next structure**. **Reveal answer** shows the answer and records that question as missed.
 5. At the end, review your score and missed structures. Choose **Retry missed** to practice those entries or **New full round** to reshuffle the entire section.
@@ -51,7 +52,7 @@ Matching ignores capitalization, extra spaces, and ordinary punctuation. “Arte
 - **Fibular Artery** or **Peroneal Artery**
 - **Superior Vena Cava** or **SVC**
 
-Anatomical distinctions still matter: **External Carotid** does not answer an **Internal Carotid** question. The page accepts explicitly supported names rather than arbitrary misspellings or every possible abbreviation.
+An explicitly wrong vessel type is rejected: “Internal Carotid Vein” does not answer “Internal Carotid Artery.” Anatomical distinctions still matter: **External Carotid** does not answer an **Internal Carotid** question. The page accepts explicitly supported names rather than arbitrary misspellings or every possible abbreviation.
 
 ### Progress and restarting
 
@@ -63,7 +64,9 @@ Use **Tab** to move through controls and **Enter** or **Space** to activate butt
 
 ## Diagram scope and references
 
-The diagrams are original, simplified schematics for recognizing location and relationships. They are not scale drawings, dissection photographs, or replacements for your lab models. Some paired vessels are shown on one side, and posterior structures may be projected onto an anterior outline for readability. Dedicated views and orientation notes clarify these choices.
+The diagrams use published OpenStax illustrations, supplemental XR Anatomy models, and one public-domain Gray’s Anatomy plate. Each plate has a source credit and orientation note. Interactive markers, crops, and removable label covers are added in the browser; the source image pixels are unchanged. Quiz mode hides labels, view names, and explanatory plate notes until the answer is graded.
+
+See [SOURCES.md](SOURCES.md) for artwork licenses, source links, and anatomical interpretation notes. Source artwork does not establish marker correctness by itself: every target must also be visually reviewed. These illustrations complement your lab models and dissections.
 
 Two exam-list terms require an interpretation:
 
@@ -81,9 +84,12 @@ Further reading:
 
 - `index.html`: page structure, controls, and reference notes.
 - `style.css`: layout, colors, and responsive styles.
-- `data.js`: names, accepted aliases, explanations, and SVG paths for each structure.
+- `data.js`: names, accepted aliases, and explanations.
+- `atlas.js`: source plates, crops, label covers, and target coordinates.
+- `plates/`: attributed source artwork; licenses are listed in `SOURCES.md`.
 - `app.js`: diagrams, selections, zoom, quiz flow, and answer matching.
-- `verify.cjs`: data and quiz-logic checks using Node.js built-ins.
+- `verify.cjs`: term coverage, source-file, and target-coordinate checks.
+- `browser-qa.cjs`: Playwright tests and rendered screenshots.
 
 From the repository root, run:
 
@@ -93,6 +99,25 @@ node --check bmcc-bio426/anatomy-lab/app.js
 node --check bmcc-bio426/anatomy-lab/data.js
 ```
 
-The checks cover entry counts, required fields, canonical answers and aliases, carotid distinctions, full quiz rounds, scoring, duplicate submission handling, and missed-term retries. They do not replace browser checks of diagram placement, appearance, or touch interaction.
+### Run browser QA locally (no GitHub Actions required)
+
+Install Playwright in an isolated directory once:
+
+```sh
+npm install --prefix /tmp/bio426-playwright --no-package-lock playwright@1.54.1
+/tmp/bio426-playwright/node_modules/.bin/playwright install chromium
+```
+
+From the repository root, test the working copy:
+
+```sh
+PLAYWRIGHT_MODULE=/tmp/bio426-playwright/node_modules/playwright \
+QA_TARGET=checkout \
+node bmcc-bio426/anatomy-lab/browser-qa.cjs
+```
+
+Use `QA_TARGET=live` to test the hosted page. Optionally set `QA_CHROME` to an installed Chrome executable, such as `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`. The checkout runner starts and stops its own local server. Set `QA_OUTPUT` to choose an output directory; the default is `qa-output/` relative to your current directory.
+
+The browser checks cover all 99 list selections and diagram targets, view switching, labels, zoom centering, complete quiz rounds, aliases, wrong answers, reveals, retry rounds, restarting, keyboard tabs, mobile layouts, and failed assets. Screenshots and `findings.json` are saved for inspection. A failing check exits with code 1. Browser checks verify behavior; inspect the screenshots and compare markers against the source plates to assess anatomy.
 
 To publish an update, commit and push the files in this folder to the site’s `master` branch. GitHub Pages serves this directory directly; no build step is required.
