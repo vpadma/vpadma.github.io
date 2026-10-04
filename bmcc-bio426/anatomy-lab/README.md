@@ -30,7 +30,7 @@ There are **99 entries** in total. Some structures appear in more than one secti
 5. Select **Show labels** to see the source illustration’s labels; **Hide labels** restores the target view.
 6. Use **+** to zoom toward the selected structure, **−** to zoom out, and **Fit** to restore the full diagram.
 
-The gold ring marks your selection; its center identifies the target. In anterior diagrams, the person’s anatomical right is on your left; check the orientation note beneath each diagram. Most plates show systemic arteries in red and veins in blue. Pulmonary arteries appear blue and pulmonary veins red. Portal plates use colors to distinguish tributaries, and the 3D models have their own tissue colors; read the note below each plate.
+A bright amber ring with a white outline marks your selection; its center identifies the target. The ring stays the same visible size while zooming and pulses gently twice when selected, then remains still. Reduced-motion preferences disable the pulse. In anterior diagrams, the person’s anatomical right is on your left; check the orientation note beneath each diagram. Most plates show systemic arteries in red and veins in blue. Pulmonary arteries appear blue and pulmonary veins red. Portal plates use colors to distinguish tributaries, and the 3D models have their own tissue colors; read the note below each plate.
 
 ## Quiz mode
 

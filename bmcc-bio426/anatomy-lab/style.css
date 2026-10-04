@@ -6,3 +6,11 @@
 .structure .hit[d$="Z"]{fill:transparent;pointer-events:all}
 
 #diagram:has(.plate-target){background:#fff}.plate-target .selected-halo{stroke:#b57900;stroke-width:3;fill:#ffce4530;opacity:1;vector-effect:non-scaling-stroke}.plate-target .locator-ring{stroke:#176b72;stroke-width:1.5;fill:#ffffffb0;vector-effect:non-scaling-stroke}.plate-target .target-center{fill:#172c41;pointer-events:none}.plate-target .hit{fill:transparent;stroke:none;pointer-events:all}.plate-target:focus .locator-ring,.plate-target:hover .locator-ring{fill:#ffce45;stroke:#b57900}#plate-credit{font-size:12px;padding:12px 16px;color:var(--muted);border-top:1px solid var(--line)}#plate-credit p{margin:0 0 5px}#plate-credit a{color:var(--accent)}
+
+/* A fixed screen-size ring stays legible on both overview and zoomed plates. */
+.plate-target .selection-outline{fill:none;stroke:white;stroke-width:7;vector-effect:non-scaling-stroke;pointer-events:none}
+.plate-target .selected-halo{fill:none;stroke:#ffab00;stroke-width:3.5;opacity:1;filter:drop-shadow(0 0 1px #503300);pointer-events:none}
+.plate-target.is-selected .target-center{fill:#172c41;stroke:white;stroke-width:1;vector-effect:non-scaling-stroke}
+.plate-target .selection-pulse{fill:none;stroke:#ffab00;stroke-width:3;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;pointer-events:none;opacity:0;animation:selection-pulse 2s ease-out 2}
+@keyframes selection-pulse{0%{transform:scale(1);opacity:.75}100%{transform:scale(1.65);opacity:0}}
+@media(prefers-reduced-motion:reduce){.plate-target .selection-pulse{animation:none}}
